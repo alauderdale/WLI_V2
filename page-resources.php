@@ -21,7 +21,7 @@ Template Name: Resources
                     <a href="<?php the_permalink();?>">
                         <img class="img-responsive margin-bottom" src="<?php the_field('resource_image_url');?>" width="200px"/>
                     </a>
-                    <h3><?php the_title();?></h3>
+                    <h3 style="min-height:41px;"><?php the_title();?></h3>
                     <p>
                         <?php the_excerpt();?>
                     </p>

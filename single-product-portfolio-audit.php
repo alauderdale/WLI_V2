@@ -42,9 +42,7 @@ Template Name Posts: Portfolio Audit
             </p>
         </div>
         <div class="six-col left">
-            <p>
-                Form up in here
-            </p>
+            <?php echo do_shortcode("[mc4wp_form id='1871']"); ?>
         </div>
     </div><!-- end row -->
 </div>

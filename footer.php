@@ -1,3 +1,4 @@
+<?php get_template_part( 'content', 'signup_banner' ); ?>
 <div class="clearfix"></div>
 
 

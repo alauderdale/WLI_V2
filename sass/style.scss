@@ -7,6 +7,7 @@ Author URI: http://www.eternalcontrast.com
 */
 
 @import 'bourbon/bourbon';
+@import "base/base";
 @import url(http://fonts.googleapis.com/css?family=Fanwood+Text:400,400italic);
 
 
@@ -26,7 +27,11 @@ Author URI: http://www.eternalcontrast.com
 
 
 
+// fix base
 
+img{
+    max-width:none!important;
+}
 
 
 
@@ -298,9 +303,9 @@ ul.link-list{
            width:100%;
         }
         img{
-            max-width:80%;
+            max-width:90%!important;
             @include breakpoint(md) {
-                max-width:30%;
+                max-width:30%!important;
             }
             
         }
@@ -344,6 +349,43 @@ ul.link-list{
     }
 }
 
+.resource-panel{
+    background-color:rgba(255,255,255,1);
+    @include box-shadow(0 2px 10px rgba(0,0,0,.2));
+    padding:40px;
+    border-radius:3px;
+    margin-top:-270px;
+    @include breakpoint(md) {
+        margin-top:0;
+    }
+}
+
+.login-panel{
+    padding:0 24px;
+    a{
+        display:inline-block;
+        padding:18px 0;
+        color:white;
+        font-family:$headingfont;
+        min-width:300px;
+        @include breakpoint(md) {
+            min-width:100%;
+        }
+        .chevron{
+            margin-left:20px;
+        }
+        &:first-of-type{
+            border-bottom:1px solid rgba(255,255,255,.5);
+        }
+    }
+}
+
+
+//modals
+
+.modal-default{
+    padding:20px;
+}
 
 
 /* grid add up to 12 */
@@ -479,6 +521,12 @@ em{
 }
 .uppercase{
     text-transform:uppercase;
+}
+
+// forms
+
+button, input[type="submit"]{
+    background-color:$greenColor!important;
 }
 
 
@@ -678,6 +726,16 @@ em{
     margin-bottom:40px;
     background-position:top;
     @include box-shadow(0 1px 0 #fff);
+    &.resource-hero{
+        height:234px;
+        h1{
+            font-size:30pt;
+            text-align:left!important;
+        }
+        h2{
+            text-align:left!important;
+        }
+    }
     &.product-hero{
         height:220px;
     }
@@ -1188,6 +1246,17 @@ ul{
     bottom:200px;
     margin-bottom:-100px;
     .blog-sidebar{
+        p.micro{
+            font-size:8pt;
+        }
+        .btn-wire{
+            width: 75%;
+            margin-bottom:$baseline;
+        }
+        width: 155px;
+        @include breakpoint(md) {
+            width: 100%;
+        }
         font-family:$headingfont;
         float: right;
         background-color:rgba(255,255,255,1);
@@ -1890,6 +1959,78 @@ and (max-width : 800px) {
         font-weight:bold;
     }
 
+}
+
+//signup banner
+
+#sign-up{
+      margin-top: -93px;        /* Size of fixed header */
+  padding-bottom: 93px; 
+  display: block; 
+}
+
+.signup-banner{
+    background-color:shade(#cab67c,30%) ;
+    padding:$baseline*2 0;
+    border-top:1px solid #bbb;
+    .mc4wp-alert{
+        color:white!important;
+    }
+    h1,h2,h3,h4,h5,h6{
+        color:white;
+        text-align:center;
+    }
+    h2{
+        font-size:28pt;
+        font-weight:100;
+        @include breakpoint(md) {
+            font-size:18pt;
+        }
+    }
+    .btn-wire{
+        background-color:transparent!important;
+        border:1px solid rgba(255,255,255,.5);
+        color:white;
+        box-shadow:none;
+        &:hover{
+            background:transparent;
+            border:1px solid white;
+            color:white;
+        }
+    }
+    .signup-banner-form{
+        display:inline-block;
+        margin:0 auto;
+        width: 100%;
+        text-align:center;
+        input{
+            padding:$baseline/2 $baseline;
+        }
+        input[type="submit"]{
+            padding-bottom:15px;
+        }
+        form{
+            display:inline-block;
+             @include breakpoint(md) {
+                width: 100%;
+            }
+        }
+        p{
+            float: left;
+            margin-right:10px;
+            margin-bottom:0;
+              @include breakpoint(md) {
+                float: none;
+                width: 100%;
+                button, input[type="submit"]{
+                    width: 100%;
+                }
+              }
+            &:last-of-type{
+                margin-right:0;
+            }
+        }
+    }
 }
 
 

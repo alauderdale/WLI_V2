@@ -6,6 +6,8 @@ Template Name: Home
 
 <?php get_header(); ?>
 
+
+
 <!--     slider -->
     <div class="slider">
         <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
@@ -74,7 +76,7 @@ Template Name: Home
                     <p>
                         <?php the_field('course_text');?> 
                     </p>
-                    <a class="button btn-default" href="<?php the_field('course_url');?>">Sign up for the Course</a>   
+                    <a class="button btn-default fancybox fancybox.ajax" href="<?php echo esc_url( get_permalink( get_page_by_title( 'modal course' ) ) ); ?>">Sign up for the Course</a>   
                 </div>
             </div>     
         </div>

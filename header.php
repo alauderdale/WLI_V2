@@ -56,7 +56,8 @@
                 Call Us 303.753.7578
             </p>
             <p>
-                <a class="login-button" href="https://www.junxureclientview.com/12447" target="_blank">   
+                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Login Select' ) ) ); ?>" class="login-button fancybox fancybox.ajax">
+<!--                 <a class="login-button"  href="https://www.junxureclientview.com/12447" target="_blank">   --> 
                     client login
                 </a>
             </p>

@@ -6,8 +6,6 @@
 
         <div class="sidebar-section">
 
-            <h1>Subscribe</h1>
-
             <ul class="subscribe">
 
                 <li class="side-twitter left">
@@ -38,6 +36,12 @@
 
             </ul>
 
+
+            <h1>Subscribe</h1>
+
+            <a href="#sign-up" class="button btn-wire btn-default">
+                Join Newsletter
+            </a>
         </div>
 
         <div class="clearfix"></div>
