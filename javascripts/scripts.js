@@ -67,6 +67,20 @@ $('.service a.more-service').click(function(){
 
   });
 
+
+//fire fancyboxness!
+
+$('#mc4wp-form-1').submit(function() {
+
+    $.fancybox({
+        type: 'inline',
+        content: jQuery('#download-file').html()
+    });
+
+} );
+
+
+
 /// sticky
 
   $('.service-menu').stickyScroll({ container: '#sticky-container' });
